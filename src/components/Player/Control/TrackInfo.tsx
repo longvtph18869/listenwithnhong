@@ -19,7 +19,7 @@ const TrackInfo: React.FC = () => {
       {/* Info */}
       <div className="flex flex-col justify-center h-[46px] ml-3">
         <div className="w-[150px] font-semibold text-base text-[color:var(--color-text)] opacity-90 mb-1 truncate cursor-default">{info.title}</div>
-        <div className="flex text-[color:var(--color-text)] text-xs opacity-60">
+        <div className="w-[150px] flex text-[color:var(--color-text)] text-xs opacity-60">
         {
           info.artists &&
           info.artists.map((e:any, i:number) => {
