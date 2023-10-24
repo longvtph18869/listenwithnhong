@@ -8,7 +8,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "phamhiep2506 <phamhiep25062k@gmail.com>",
+  "author": "longvt18869 <longtienvu15092000@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.16"
