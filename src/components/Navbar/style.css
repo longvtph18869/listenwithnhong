@@ -3,7 +3,7 @@
     height: 40px;
     margin-top: 5px;
     display: inline-block;
-    background: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg) 50%/contain no-repeat;
+    background: url("./../../../public/logo.png") 50%/contain no-repeat;
 }
 input[type = 'search']::-webkit-search-cancel-button{
     -webkit-appearance: none;
