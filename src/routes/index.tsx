@@ -13,7 +13,7 @@ const RouterPage: React.FC = () => {
   return (
     <Routes>
       <Route index element={<Home />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/listenwithnhong" element={<Home />} />
       <Route path="/top100" element={<Top100 />} />
       <Route path="/zingchart" element={<ChartHome />} />
       <Route path="/search" element={<Search />}>
