@@ -17,7 +17,7 @@ const Top100: React.FC = () => {
 
   return (
     <>
-      <main className="inset-0 box-border pt-[64px] pb-[96px] px-[10vw]">
+      <main className="inset-0 box-border pt-[64px] pb-[96px] sm:px-[10vw] px-[4vw]">
         {/* Playlist */}
         <div className="mt-8">
           {
@@ -30,7 +30,7 @@ const Top100: React.FC = () => {
                   {e.title}
                 </div>
                 <div
-                  className="grid grid-cols-5 gap-x-6 gap-y-11">
+                  className="grid sm:grid-cols-5 grid-cols-2 sm:gap-x-6 gap-x-4 gap-y-11">
                   {
                     e.items.map((element: {title: string, encodeId: string, thumbnail: string, sortDescription: string}, index: number) => (
                       <PlaylistCover

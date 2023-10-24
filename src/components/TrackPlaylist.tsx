@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { formatTime } from "../utils/formatTime"
 import { useAppDispatch, useAppSelector } from "../hooks/redux"
 import { setSongId, changeIconPlay, setAutoPlay, setCurrnetIndexPlaylist } from "../redux/features/audioSlice"
-
+import "./style.css"
 interface typeTrackListDetailPlaylist {
   streamingStatus: number
   encodeId: string
@@ -19,8 +19,8 @@ const TrackListDetailPlaylist: React.FC<{ items: [] }> = ({ items }) => {
 
   const dispatch = useAppDispatch()
 
-  const handleClickPlaySong = (streamingStatus: number, encodeId: string, currentIndex: number):void => {
-    if(streamingStatus === 1) {
+  const handleClickPlaySong = (streamingStatus: number, encodeId: string, currentIndex: number): void => {
+    if (streamingStatus === 1) {
       dispatch(setSongId(
         encodeId
       ))
@@ -33,10 +33,10 @@ const TrackListDetailPlaylist: React.FC<{ items: [] }> = ({ items }) => {
   return (
     <div>
       {
-        items.map((e: typeTrackListDetailPlaylist, i:number) => {
+        items.map((e: typeTrackListDetailPlaylist, i: number) => {
           return (
             <div
-            key={i}
+              key={i}
               className={"flex items-center p-2 rounded-lg transition-all duration-300 " + (e.streamingStatus === 1 ? "cursor-pointer" : "cursor-default hover:bg-[black]") + (currnetIndexPlaylist === i ? " bg-[color:var(--color-primary-bg)]" : " hover:bg-[color:var(--color-secondary-bg)]")}
             >
               {/* Thumbnail */}
@@ -45,7 +45,7 @@ const TrackListDetailPlaylist: React.FC<{ items: [] }> = ({ items }) => {
                 onClick={() => {
                   handleClickPlaySong(e.streamingStatus, e.encodeId, i)
                 }}
-               />
+              />
               {/* End Thumbnail */}
               {/* Title & Artist */}
               <div className="flex flex-1 flex-col">
@@ -55,33 +55,36 @@ const TrackListDetailPlaylist: React.FC<{ items: [] }> = ({ items }) => {
                   onClick={() => {
                     handleClickPlaySong(e.streamingStatus, e.encodeId, i)
                   }}
-                >{e.title}</div>
+                ><p className="sm:w-full w-[200px] overflow-x-auto track-title">{e.title}</p></div>
                 {/* Artist */}
-                <div className={"mt-[2px] text-sm opacity-70 truncate " + (currnetIndexPlaylist === i ? " text-[color:var(--color-primary)]" : " text-[color:var(--color-text)]")}>
+                <div className={"sm:w-full flex w-[200px]  mt-[2px] text-sm opacity-70 truncate " + (currnetIndexPlaylist === i ? " text-[color:var(--color-primary)]" : " text-[color:var(--color-text)]")}>
                   {
-                    (e.artists || []).filter((element: any) => { return element !== undefined }).map((eArtist: {alias: string, name: string}, iArtist: number) => {
+                    (e.artists || []).filter((element: any) => { return element !== undefined }).map((eArtist: { alias: string, name: string }, iArtist: number) => {
                       return (
-                        <span key={iArtist}>
-                          {
-                            (iArtist > 0) ? (<span>, </span>) : ("")
-                          }
-                          <Link
-                            className="hover:underline"
-                            to={`/artist/${eArtist.alias}`}
-                          >
-                            {eArtist.name}
-                          </Link>
-                        </span>
+                        <>
+                          <span key={iArtist}>
+                            {
+                              (iArtist > 0) ? (<span>, </span>) : ("")
+                            }
+                            <Link
+                              className="hover:underline"
+                              to={`/artist/${eArtist.alias}`}
+                            >
+                              {eArtist.name}
+                            </Link>
+                          </span>
+                        </>
                       )
                     })
                   }
+                  <span className="text-yellow-500 sm:hidden flex font-medium ml-4">{(e.streamingStatus === 1 ? "" : "VIP")}</span>
                 </div>
                 {/* End Artist */}
               </div>
               {/* End Title & Artist */}
 
               {/* Show Song VIP */}
-              <div className="text-yellow-500 font-medium mr-4">{(e.streamingStatus === 1 ? "" : "VIP")}</div>
+              <div className="text-yellow-500 sm:block hidden font-medium mr-4">{(e.streamingStatus === 1 ? "" : "VIP")}</div>
               {/* End Show Song VIP */}
 
               {/* Show Time Deration */}

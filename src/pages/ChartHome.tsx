@@ -5,7 +5,7 @@ import { useAppDispatch } from "../hooks/redux"
 import { setPlaylistSong } from "../redux/features/audioSlice"
 import Loading from "../components/Loading"
 
-const ChartHome:React.FC = () => {
+const ChartHome: React.FC = () => {
 
   const [dataChartHome, setDataChartHome] = useState<any>()
 
@@ -21,18 +21,22 @@ const ChartHome:React.FC = () => {
   }, [])
 
   dataChartHome &&
-  dispatch(setPlaylistSong(dataChartHome.RTChart.items))
+    dispatch(setPlaylistSong(dataChartHome.RTChart.items))
 
   return (
     <>
-      <main className="inset-0 box-border pt-[64px] pb-[96px] px-[10vw]">
-        <div className="mt-8">
+      <main className="inset-0 box-border pt-[64px] pb-[96px] sm:px-[10vw] px-[4vw]">
+        <div
+          className="flex justify-between items-end text-[28px] font-bold text-[color:var(--color-text)] mt-9 mb-3 uppercase">
+          ZINGCHART
+        </div>
+        <div className="mt-3">
           {
             dataChartHome
-            ?
-            <TrackPlaylist items={dataChartHome.RTChart.items}/>
-            :
-            <Loading />
+              ?
+              <TrackPlaylist items={dataChartHome.RTChart.items} />
+              :
+              <Loading />
           }
         </div>
       </main>

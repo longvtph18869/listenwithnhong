@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getSearch } from "../api/search"
 import TrackPlaylist from "../components/TrackPlaylist"
+import Loading from "../components/Loading"
 
 const Search: React.FC = () => {
 
@@ -24,6 +25,9 @@ const Search: React.FC = () => {
           {
             dataSearch &&
             <TrackPlaylist items={dataSearch.songs}/>
+          }
+          { 
+            !dataSearch &&  <Loading />
           }
         </div>
       </main>

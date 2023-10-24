@@ -38,7 +38,11 @@ const MV:React.FC = () => {
   }
 
   return (
-    <div className="pt-[65px] pb-[96px] px-[10vw]">
+    <div className="pt-[65px] pb-[96px] sm:px-[10vw] px-[4vw]">
+      <div
+          className="flex justify-between items-end text-[28px] font-bold text-[color:var(--color-text)] mt-9 mb-3 uppercase">
+          MV
+        </div>
       {
         dataListMV
         ?
@@ -48,7 +52,7 @@ const MV:React.FC = () => {
           hasMore={hasMore}
           loader={<Loading />}
         >
-          <div className="grid grid-cols-5 gap-x-6 gap-y-10">
+          <div className="grid sm:grid-cols-5 grid-cols-2 sm:gap-x-6 gap-x-4 gap-y-10">
             {
               dataListMV.map((e: {encodeId: string, title: string, thumbnail: string, artists: []}, i) => {
                 return (

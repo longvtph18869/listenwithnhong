@@ -20,7 +20,7 @@ const PlaylistInfo:React.FC<detailPlaylistInfoProps> = ({ thumbnailM, title, art
   const styleButton = "flex justify-center items-center rounded-lg py-2 px-4 w-auto h-10 min-h-[40px] transition duration-300 hover:scale-105 mr-4"
 
   return (
-    <div className="flex mb-[72px]">
+    <div className="sm:flex mb-[72px]">
       {/* Thumbnail */}
       <div className="relative min-w-[288px] min-h-[288px]">
         <img
@@ -39,7 +39,7 @@ const PlaylistInfo:React.FC<detailPlaylistInfoProps> = ({ thumbnailM, title, art
         {/* End Image Blur */}
       </div>
       {/* End Thumbnail */}
-      <div className="flex flex-col justify-center ml-14">
+      <div className="flex flex-col justify-center sm:ml-14 sm:mt-0 mt-3">
           {/* Title */}
           <div className="text-4xl font-bold text-[color:var(--color-text)]">{title}</div>
           {/* End Title */}
