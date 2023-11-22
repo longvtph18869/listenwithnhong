@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/listenwithnhong/static/css/main.384d6cb7.css",
-    "main.js": "/listenwithnhong/static/js/main.b2bcb86e.js",
+    "main.js": "/listenwithnhong/static/js/main.000477ae.js",
     "static/js/787.ded37e57.chunk.js": "/listenwithnhong/static/js/787.ded37e57.chunk.js",
     "static/media/logo.png": "/listenwithnhong/static/media/logo.2da3c5039dc308b9c89e.png",
     "index.html": "/listenwithnhong/index.html",
     "main.384d6cb7.css.map": "/listenwithnhong/static/css/main.384d6cb7.css.map",
-    "main.b2bcb86e.js.map": "/listenwithnhong/static/js/main.b2bcb86e.js.map",
+    "main.000477ae.js.map": "/listenwithnhong/static/js/main.000477ae.js.map",
     "787.ded37e57.chunk.js.map": "/listenwithnhong/static/js/787.ded37e57.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.384d6cb7.css",
-    "static/js/main.b2bcb86e.js"
+    "static/js/main.000477ae.js"
   ]
 }
