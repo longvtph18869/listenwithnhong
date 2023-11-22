@@ -30,7 +30,7 @@ const Control:React.FC<{auRef: HTMLAudioElement | null}> = ({ auRef }) => {
         {/* End Mid Controls Button */}
 
         {/* Right Controls Button */}
-        <div className="sm:flex justify-center items-center hidden">
+        <div className="md:flex justify-center items-center hidden">
           <LyricControl />
           <RepeatControl />
           <ShuffleControl />

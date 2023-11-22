@@ -73,7 +73,7 @@ const Artist: React.FC = () => {
 
   return(
     <>
-      <div className="mx-[10vw] mt-16 mb-24">
+      <div className="sm:mx-[10vw] mx-[4vw] mt-16 mb-24">
         {
           dataDetailArtist
           ?

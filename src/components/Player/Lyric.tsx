@@ -88,7 +88,7 @@ const Lyric: React.FC<{ auRef: HTMLAudioElement | null }> = ({ auRef }) => {
           <div className="h-[80px]"></div>
           <div className="z-30 h-full">
             <div className="grid grid-cols-9 h-full">
-              <div className="col-span-4 w-full h-full px-3 lg:flex lg:flex-col lg:items-end lg:justify-center">
+              <div className="col-span-4 w-full h-full px-3 hidden md:flex md:flex-col md:items-end md:justify-center">
                 <div className="w-[500px] max-w-[80%] mr-[50px]">
                   <div className="cover"><figure className="image is-48x48 ">
                     <img className="rounded-md" src={info.thumbnail.replaceAll("w94", "w480")} alt={info.title} />
@@ -96,7 +96,7 @@ const Lyric: React.FC<{ auRef: HTMLAudioElement | null }> = ({ auRef }) => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-5 w-full h-full px-3 lg:flex lg:flex-col lg:items-start lg:justify-center">
+              <div className="col-span-9 md:col-span-5 w-full h-full px-3 flex flex-col items-start justify-center">
 
                 <div className="scroll-content font-semibold max-h-[480px] text-[42px] text-[color:var(--color-text)] w-full mx-0 my-0 h-full flex flex-col overflow-y-auto overflow-x-hidden">
 

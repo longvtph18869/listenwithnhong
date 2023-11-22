@@ -12,9 +12,9 @@ interface detailArtistInfoProps {
 const DetailArtistInfo:React.FC<detailArtistInfoProps> = ({ name, thumbnailM, sortBiography, realname, birthday, totalFollow }) => {
   return (
     <>
-      <div className="flex mb-[72px]">
+      <div className="sm:flex mb-[72px]">
         {/* Thumbnail */}
-        <div className="relative min-w-[248px] min-h-[248px]">
+        <div className="relative min-w-[288px] min-h-[288px]">
           <img
             className="rounded-full w-full h-full"
             src={thumbnailM}
@@ -32,7 +32,7 @@ const DetailArtistInfo:React.FC<detailArtistInfoProps> = ({ name, thumbnailM, so
         </div>
         {/* End Thumbnail */}
 
-        <div className="flex flex-col justify-center ml-14">
+        <div className="flex flex-col justify-center sm:ml-14 sm:mt-0 mt-3">
           {/* Name */}
           <div className="text-4xl font-bold text-[color:var(--color-text)]">{name}</div>
           {/* End Name */}

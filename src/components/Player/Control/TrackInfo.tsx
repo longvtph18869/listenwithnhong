@@ -7,7 +7,7 @@ const TrackInfo: React.FC = () => {
   const info = useAppSelector((state) => state.audio.infoSongPlayer)
 
   return(
-    <div className="flex items-center col-span-2 sm:col-span-1">
+    <div className="flex items-center col-span-2 md:col-span-1">
       {/* Thumbnail */}
       <img
         src={info.thumbnail}
@@ -19,7 +19,7 @@ const TrackInfo: React.FC = () => {
       {/* Info */}
       <div className="flex flex-col justify-center h-[46px] ml-3">
         <div className="w-[150px] font-semibold text-base text-[color:var(--color-text)] opacity-90 mb-1 truncate cursor-default">{info.title}</div>
-        <div className="w-[150px] flex text-[color:var(--color-text)] text-xs opacity-60">
+        <div className="w-[150px] flex text-[color:var(--color-text)] text-xs opacity-60 truncate">
         {
           info.artists &&
           info.artists.map((e:any, i:number) => {
