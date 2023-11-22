@@ -14,16 +14,24 @@ const Lyric: React.FC<{ auRef: HTMLAudioElement | null }> = ({ auRef }) => {
   const isPlay = useAppSelector((state) => state.audio.isPlay)
   const dispatch = useAppDispatch()
   const images = [
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/6/3/b/d/63bda9101dd06125fa0746b112ea2cab.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/7/0/d/6/70d67f66a08d41eb29d8513c2dfc0bd3.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/0/0/2/2/002271599516a528339fa923c34b32e7.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/6/d/4/f/6d4f735ebf396d796ce8e6467d70d072.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/c/0/d/7/c0d7d767f14cfddcde7c9a14f90c19fc.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/7/7/7/b/777b993744b55e4fe016a4f9a529c007.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/c/c/9/f/cc9fce8719364ba9d8a846984c590a0e.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/b/8/0/e/b80e5777c7eec332c882bf79bd692056.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/3/a/e/8/3ae816de233a9eae0116b4b5a21af43e.jpg',
-    'https://photo-resize-zmp3.zmdcdn.me/w1920_r3x2_jpeg/cover/8/e/2/4/8e24305fde744814083af980a593e8c2.jpg'
+    'https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/1379640/pexels-photo-1379640.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/2049422/pexels-photo-2049422.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/1435075/pexels-photo-1435075.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/1252508/pexels-photo-1252508.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/845242/pexels-photo-845242.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/3626475/pexels-photo-3626475.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/6640111/pexels-photo-6640111.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/707265/pexels-photo-707265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/11788823/pexels-photo-11788823.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    'https://images.pexels.com/photos/8409020/pexels-photo-8409020.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    'https://images.pexels.com/photos/1408221/pexels-photo-1408221.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    'https://images.pexels.com/photos/1408225/pexels-photo-1408225.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load',
+    'https://images.pexels.com/photos/2734469/pexels-photo-2734469.jpeg?auto=compress&cs=tinysrgb&w=1600'
   ]
   const lyrRef = useRef<HTMLDivElement>(null)
 
