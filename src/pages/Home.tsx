@@ -39,7 +39,7 @@ const Home: React.FC = () => {
                   {(e.title === "") ? (e.sectionId.slice(1)) : (e.title)}
                 </div>
                 <div
-                  className="grid sm:grid-cols-5 grid-cols-2 sm:gap-x-6 gap-x-4 gap-y-11">
+                  className="grid xl:grid-cols-5 md:grid-cols-3 grid-cols-2 md:gap-x-6 gap-x-4 gap-y-11">
                   {
                     e.items.map((element: typePlaylistCover, index: number) => (
                       <PlaylistCover
